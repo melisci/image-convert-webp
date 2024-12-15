@@ -28,7 +28,7 @@ Clonar el repositorio:
 
 bash
 Copiar código
-git clone https://github.com/tu-usuario/convertidor-imagenes-webp.git
+git clone 
 cd convertidor-imagenes-webp
 Configurar el entorno:
 
