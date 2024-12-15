@@ -1,0 +1,146 @@
+/* Fuentes y fondo */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Campo de archivo */
+input[type="file"] {
+    display: block;
+    margin: 0 auto 15px;
+    padding: 15px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #f7f8fa;
+    font-size: 0.95rem;
+    color: #888;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #2575fc;
+}
+
+/* Botón */
+button {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #5c0eb8, #1e63d8);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Resultados */
+#result img {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Resultados */
+#result {
+    max-height: 60vh; /* Limita el contenedor al 60% de la pantalla */
+    overflow-y: auto; /* Activa el scroll */
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+/* Mensajes de error */
+.error {
+    color: #ff5252;
+    background-color: #ffecec;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Mensaje de eliminación */
+#deleteMessage {
+    background-color: #f8d7da;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#deleteMessageText {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#deleteAllButton:hover {
+    background-color: #c82333;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#result > div {
+    animation: fadeIn 0.5s ease-in-out;
+}
